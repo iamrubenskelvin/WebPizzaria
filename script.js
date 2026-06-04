@@ -311,8 +311,6 @@ const bebidas = [
 
 const products = [...normalPizzas, ...vintaoPizzas, ...bebidas];
 
-const normalMenu = document.getElementById("normalMenu");
-const vintaoMenu = document.getElementById("vintaoMenu");
 const tabs = document.querySelectorAll(".tab");
 const searchInput = document.getElementById("searchInput");
 
@@ -327,6 +325,9 @@ const saveMessage = document.getElementById("saveMessage");
 
 const menuButton = document.getElementById("menuButton");
 const navLinks = document.getElementById("navLinks");
+const normalMenu = document.getElementById("normalMenu");
+const vintaoMenu = document.getElementById("vintaoMenu");
+const bebidasMenu = document.getElementById("bebidasMenu");
 
 const clientForm = document.getElementById("clientForm");
 const clientName = document.getElementById("clientName");
@@ -336,6 +337,7 @@ const clientPassword = document.getElementById("clientPassword");
 const logoutClient = document.getElementById("logoutClient");
 const orderHistory = document.getElementById("orderHistory");
 const paymentMethod = document.getElementById("paymentMethod");
+const deliveryType = document.getElementById("deliveryType");
 let selectedCategory = "todas";
 let cartList = [];
 
