@@ -1,3 +1,9 @@
+const SUPABASE_URL = "https://oufbfgagvuaxeelqqfnj.supabase.co";
+
+const SUPABASE_KEY = "sb_publishable_-aVyXVyO2plOtNRpnasrqg_kaqaPAr_";
+
+const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+
 const normalPizzas = [
   {
     id: "n1",
@@ -448,7 +454,7 @@ function updateCart() {
     cartItems.innerHTML = '<p class="empty-cart">Seu carrinho está vazio.</p>';
   }
 
-  cartList.forEach(item => {
+  cartList.forEach((item) => {
     const div = document.createElement("div");
     div.className = "cart-item";
 
@@ -477,7 +483,7 @@ function updateCart() {
   cartTotal.textContent = formatCurrency(total);
   cartCount.textContent = count;
 
-  document.querySelectorAll(".remove-btn").forEach(button => {
+  document.querySelectorAll(".remove-btn").forEach((button) => {
     button.onclick = () => removeFromCart(button.dataset.id);
   });
 }
@@ -486,8 +492,31 @@ function getClient() {
   return JSON.parse(localStorage.getItem("pizzaClient"));
 }
 
-function saveClient(client) {
+async function saveClient(client) {
   localStorage.setItem("pizzaClient", JSON.stringify(client));
+
+  const { data, error } = await supabaseClient
+    .from("clientes")
+    .upsert(
+      {
+        nome: client.name,
+        celular: client.phone,
+        endereco: client.address,
+        senha: client.password
+      },
+      {
+        onConflict: "celular"
+      }
+    )
+    .select();
+
+  if (error) {
+    console.error("Erro ao salvar cliente:", error);
+    alert("Dados salvos no navegador, mas não foram enviados ao banco.");
+    return null;
+  }
+
+  return data[0];
 }
 
 function loadClientData() {
@@ -537,7 +566,7 @@ function renderOrderHistory() {
     orderHistory.appendChild(div);
   });
 
-  document.querySelectorAll(".repeat-order-btn").forEach(button => {
+  document.querySelectorAll(".repeat-order-btn").forEach((button) => {
     button.addEventListener("click", () => {
       repeatOrder(Number(button.dataset.index));
     });
@@ -549,11 +578,13 @@ function repeatOrder(index) {
   const order = history[index];
 
   if (!order || !order.itemsData) {
-    alert("Esse pedido foi salvo no formato antigo. Faça um novo pedido para repetir.");
+    alert(
+      "Esse pedido foi salvo no formato antigo. Faça um novo pedido para repetir.",
+    );
     return;
   }
 
-  cartList = order.itemsData.map(item => ({ ...item }));
+  cartList = order.itemsData.map((item) => ({ ...item }));
 
   updateCart();
   cart.classList.add("open");
@@ -582,9 +613,11 @@ function sendOrderToWhatsapp() {
 
   const phoneNumber = "5511999036467";
 
-  const orderItems = cartList.map(item => {
-    return `${item.quantity}x ${item.name} - ${formatCurrency(item.price * item.quantity)}`;
-  }).join("%0A");
+  const orderItems = cartList
+    .map((item) => {
+      return `${item.quantity}x ${item.name} - ${formatCurrency(item.price * item.quantity)}`;
+    })
+    .join("%0A");
 
   const total = cartList.reduce((sum, item) => {
     return sum + item.price * item.quantity;
@@ -608,10 +641,7 @@ function sendOrderToWhatsapp() {
       `Celular: ${client.phone}%0A` +
       `Endereço: ${client.address}%0A%0A`;
   } else {
-    clientInfo =
-      `Nome:%0A` +
-      `Celular:%0A` +
-      `Endereço:%0A%0A`;
+    clientInfo = `Nome:%0A` + `Celular:%0A` + `Endereço:%0A%0A`;
   }
 
   const message =
@@ -627,11 +657,13 @@ function sendOrderToWhatsapp() {
 
   if (client) {
     saveOrderHistory({
-  date: new Date().toLocaleString("pt-BR"),
-  itemsText: cartList.map(item => `${item.quantity}x ${item.name}`).join(", "),
-  itemsData: cartList.map(item => ({ ...item })),
-  total: finalTotal
-});
+      date: new Date().toLocaleString("pt-BR"),
+      itemsText: cartList
+        .map((item) => `${item.quantity}x ${item.name}`)
+        .join(", "),
+      itemsData: cartList.map((item) => ({ ...item })),
+      total: finalTotal,
+    });
 
     renderOrderHistory();
   }
@@ -669,7 +701,7 @@ renderVintaoPizzas();
 renderBebidas();
 updateCart();
 
-clientForm.addEventListener("submit", (event) => {
+clientForm.addEventListener("submit", async (event) => {
   event.preventDefault();
 
   const client = {
@@ -679,9 +711,11 @@ clientForm.addEventListener("submit", (event) => {
     password: clientPassword.value.trim(),
   };
 
-  saveClient(client);
+  const savedClient = await saveClient(client);
 
-  alert("Dados salvos com sucesso!");
+  if (savedClient) {
+    alert("Dados salvos com sucesso no Supabase!");
+  }
 });
 
 logoutClient.addEventListener("click", () => {
