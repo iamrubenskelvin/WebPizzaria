@@ -268,7 +268,46 @@ const vintaoPizzas = [
   }
 ];
 
-const products = [...normalPizzas, ...vintaoPizzas];
+const bebidas = [
+  {
+    id: "b1",
+    name: "Coca-Cola 2L",
+    ingredients: "Refrigerante gelado 2 litros.",
+    price: 12,
+    category: "bebida",
+    image: "imagens/coca-cola-2l.svg"
+  },
+  {
+    id: "b2",
+    name: "Guaraná 2L",
+    ingredients: "Refrigerante gelado 2 litros.",
+    price: 10,
+    category: "bebida",
+    image: "imagens/guarana-2l.svg"
+  },
+  {
+    id: "b3",
+    name: "Coca-Cola Lata",
+    ingredients: "Refrigerante lata 350ml.",
+    price: 5,
+    category: "bebida",
+    image: "imagens/coca-cola-lata.svg"
+  },
+  {
+    id: "b4",
+    name: "Água Mineral",
+    ingredients: "Garrafa de água mineral.",
+    price: 3,
+    category: "bebida",
+    image: "imagens/agua-mineral.svg"
+  }
+];
+
+const products = [
+  ...normalPizzas,
+  ...vintaoPizzas,
+  ...bebidas
+];
 
 const normalMenu = document.getElementById("normalMenu");
 const vintaoMenu = document.getElementById("vintaoMenu");
@@ -326,9 +365,9 @@ function createProductCard(product) {
 function renderNormalPizzas() {
   normalMenu.innerHTML = "";
 
-  const search = searchInput.value.trim().toLowerCase();
-
-  const filtered = normalPizzas.filter(product => {
+    const search = searchInput.value.trim().toLowerCase();
+    const menuProducts = [...normalPizzas];
+    const filtered = menuProducts.filter(product => {
     const matchCategory = selectedCategory === "todas" || product.category === selectedCategory;
     const matchSearch = product.name.toLowerCase().includes(search) || product.ingredients.toLowerCase().includes(search);
 
@@ -352,6 +391,21 @@ function renderVintaoPizzas() {
 
   vintaoPizzas.forEach(product => {
     vintaoMenu.appendChild(createProductCard(product));
+  });
+
+  addButtonEvents();
+}
+
+function renderBebidas() {
+
+  bebidasMenu.innerHTML = "";
+
+  bebidas.forEach(product => {
+
+    bebidasMenu.appendChild(
+      createProductCard(product)
+    );
+
   });
 
   addButtonEvents();
@@ -553,6 +607,7 @@ document.querySelectorAll(".nav-links a").forEach(link => {
 
 renderNormalPizzas();
 renderVintaoPizzas();
+renderBebidas();
 updateCart();
 
 
