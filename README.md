@@ -1,63 +1,101 @@
-# 🍕 WebPizzaria
+# 🍕 Pizzaria É Hoje - Cardápio Online
 
-Projeto de cardápio digital desenvolvido para pizzarias de pequeno e médio porte, oferecendo uma experiência moderna e intuitiva para clientes realizarem pedidos online.
+Sistema de cardápio digital desenvolvido para a **Pizzaria É Hoje**, permitindo que clientes visualizem produtos, montem pedidos e enviem diretamente pelo WhatsApp.
 
 ## 🚀 Funcionalidades
 
-* Cardápio digital organizado por categorias
-* Seção exclusiva para pizzas promocionais
-* Carrinho de compras
+### 📋 Cardápio Digital
+
+* Pizzas tradicionais
+* Pizzas promocionais de R$20
+* Seção exclusiva de bebidas
+* Busca por sabores
+* Filtro por categorias
+
+### 🛒 Carrinho de Compras
+
+* Adicionar produtos ao carrinho
+* Remover produtos
+* Atualização automática de valores
+* Contador de itens
+
+### 👤 Área do Cliente
+
+* Cadastro opcional
+* Nome
+* Celular
+* Endereço
+* Senha
+* Preenchimento automático dos dados nos próximos pedidos
+* Histórico de pedidos
+* Repetir pedidos anteriores
+
+### 💳 Finalização do Pedido
+
 * Integração com WhatsApp
-* Pesquisa de sabores
-* Design responsivo para celular, tablet e desktop
-* Interface moderna inspirada em aplicativos de delivery
-* Informações de contato e localização
+* Seleção de forma de pagamento:
+
+  * Pix
+  * Dinheiro
+  * Débito
+  * Crédito
+* Tipo de entrega:
+
+  * Retirada no local
+  * Entrega
+  * Consultar taxa
+
+### ☁️ Banco de Dados
+
+Integração com **Supabase** para armazenamento dos dados dos clientes.
 
 ## 🛠️ Tecnologias Utilizadas
 
 * HTML5
 * CSS3
 * JavaScript
-* Git
-* GitHub
+* Supabase
+* WhatsApp API (wa.me)
 
 ## 📱 Responsividade
 
-O projeto foi desenvolvido utilizando boas práticas de responsividade para garantir uma excelente experiência em diferentes dispositivos.
+O projeto foi desenvolvido para funcionar em:
 
-## 🎯 Objetivo
+* Desktop
+* Tablet
+* Smartphones
 
-Criar uma solução simples, rápida e acessível para pizzarias que desejam modernizar seu atendimento e facilitar o recebimento de pedidos online.
+## 📍 Informações da Pizzaria
 
-## 📍 Informações do Projeto
+**Pizzaria É Hoje**
 
-* Endereço: R. Itá, 280 - Vila Silviania, Carapicuíba - SP
-* Atendimento: Terça a Domingo
-* Horário: 18h às 23h
+📞 WhatsApp: (11) 99903-6467
+☎️ Telefone: (11) 4188-6875
 
-## 💻 Como Executar
+📍 Endereço:
+Rua Itá, 280
+Vila Silviania - Carapicuíba/SP
 
-1. Clone o repositório:
+## 🔮 Próximas Melhorias
 
-```bash
-git clone https://github.com/iamrubenskelvin/WebPizzaria.git
-```
+* Painel administrativo
+* Pedidos salvos no Supabase
+* Controle de vendas
+* Cupons de desconto
+* Programa de fidelidade
+* Status do pedido em tempo real
+* Área administrativa para gestão dos pedidos
 
-2. Abra a pasta do projeto.
+## 👨‍💻 Desenvolvedor
 
-3. Execute o arquivo `index.html` ou utilize a extensão Live Server no VS Code.
+**Rubens Kelvin**
 
-## 📸 Preview
+LinkedIn:
+https://www.linkedin.com/in/iamrubenskelvin/
 
-Adicione imagens ou screenshots do projeto nesta seção para destacar o visual da aplicação.
-
-## 👨‍💻 Autor
-
-Rubens Kelvin
-
-* LinkedIn: https://www.linkedin.com/in/iamrubenskelvin/
-* GitHub: https://github.com/iamrubenskelvin
+GitHub:
+https://github.com/iamrubenskelvin
 
 ---
 
-Projeto desenvolvido para fins de estudo, prática e composição de portfólio profissional.
+Projeto desenvolvido para modernizar e facilitar o atendimento da Pizzaria É Hoje.
