@@ -1,271 +1,271 @@
 const normalPizzas = [
   {
-    "id": "n1",
-    "name": "Atum com Cebola",
-    "ingredients": "Atum e cebola.",
-    "price": 45,
-    "category": "salgada",
-    "image": "imagens/atum-com-cebola.svg"
+    id: "n1",
+    name: "Atum com Cebola",
+    ingredients: "Atum e cebola.",
+    price: 45,
+    category: "salgada",
+    image: "imagens/atum-com-cebola.svg",
   },
   {
-    "id": "n2",
-    "name": "Atum com Mussarela",
-    "ingredients": "Atum com mussarela.",
-    "price": 50,
-    "category": "salgada",
-    "image": "imagens/atum-com-mussarela.svg"
+    id: "n2",
+    name: "Atum com Mussarela",
+    ingredients: "Atum com mussarela.",
+    price: 50,
+    category: "salgada",
+    image: "imagens/atum-com-mussarela.svg",
   },
   {
-    "id": "n3",
-    "name": "Atum com Mussarela e Vinagrete",
-    "ingredients": "Atum, mussarela e vinagrete.",
-    "price": 55,
-    "category": "salgada",
-    "image": "imagens/atum-com-mussarela-e-vinagrete.svg"
+    id: "n3",
+    name: "Atum com Mussarela e Vinagrete",
+    ingredients: "Atum, mussarela e vinagrete.",
+    price: 55,
+    category: "salgada",
+    image: "imagens/atum-com-mussarela-e-vinagrete.svg",
   },
   {
-    "id": "n4",
-    "name": "Baiana",
-    "ingredients": "Calabresa, mussarela, ovo, cebola e pimenta.",
-    "price": 45,
-    "category": "salgada",
-    "image": "imagens/baiana.svg"
+    id: "n4",
+    name: "Baiana",
+    ingredients: "Calabresa, mussarela, ovo, cebola e pimenta.",
+    price: 45,
+    category: "salgada",
+    image: "imagens/baiana.svg",
   },
   {
-    "id": "n5",
-    "name": "Caipira",
-    "ingredients": "Mussarela, frango e milho.",
-    "price": 40,
-    "category": "salgada",
-    "image": "imagens/caipira.svg"
+    id: "n5",
+    name: "Caipira",
+    ingredients: "Mussarela, frango e milho.",
+    price: 40,
+    category: "salgada",
+    image: "imagens/caipira.svg",
   },
   {
-    "id": "n6",
-    "name": "Calabresa",
-    "ingredients": "Calabresa tradicional.",
-    "price": 30,
-    "category": "salgada",
-    "image": "imagens/calabresa.svg"
+    id: "n6",
+    name: "Calabresa",
+    ingredients: "Calabresa tradicional.",
+    price: 30,
+    category: "salgada",
+    image: "imagens/calabresa.svg",
   },
   {
-    "id": "n7",
-    "name": "Calabresa com Vinagrete",
-    "ingredients": "Calabresa com vinagrete.",
-    "price": 35,
-    "category": "salgada",
-    "image": "imagens/calabresa-com-vinagrete.svg"
+    id: "n7",
+    name: "Calabresa com Vinagrete",
+    ingredients: "Calabresa com vinagrete.",
+    price: 35,
+    category: "salgada",
+    image: "imagens/calabresa-com-vinagrete.svg",
   },
   {
-    "id": "n8",
-    "name": "Calabresa com Cheddar",
-    "ingredients": "Calabresa com cheddar.",
-    "price": 35,
-    "category": "salgada",
-    "image": "imagens/calabresa-com-cheddar.svg"
+    id: "n8",
+    name: "Calabresa com Cheddar",
+    ingredients: "Calabresa com cheddar.",
+    price: 35,
+    category: "salgada",
+    image: "imagens/calabresa-com-cheddar.svg",
   },
   {
-    "id": "n9",
-    "name": "Calabresa com Requeijão",
-    "ingredients": "Calabresa com requeijão.",
-    "price": 35,
-    "category": "salgada",
-    "image": "imagens/calabresa-com-requeijao.svg"
+    id: "n9",
+    name: "Calabresa com Requeijão",
+    ingredients: "Calabresa com requeijão.",
+    price: 35,
+    category: "salgada",
+    image: "imagens/calabresa-com-requeijao.svg",
   },
   {
-    "id": "n10",
-    "name": "Dois Queijos",
-    "ingredients": "Mussarela e requeijão.",
-    "price": 35,
-    "category": "salgada",
-    "image": "imagens/dois-queijos.svg"
+    id: "n10",
+    name: "Dois Queijos",
+    ingredients: "Mussarela e requeijão.",
+    price: 35,
+    category: "salgada",
+    image: "imagens/dois-queijos.svg",
   },
   {
-    "id": "n11",
-    "name": "Frango com Cheddar",
-    "ingredients": "Frango com cheddar.",
-    "price": 25,
-    "category": "salgada",
-    "image": "imagens/frango-com-cheddar.svg"
+    id: "n11",
+    name: "Frango com Cheddar",
+    ingredients: "Frango com cheddar.",
+    price: 25,
+    category: "salgada",
+    image: "imagens/frango-com-cheddar.svg",
   },
   {
-    "id": "n12",
-    "name": "Frango com Requeijão",
-    "ingredients": "Frango com requeijão.",
-    "price": 25,
-    "category": "salgada",
-    "image": "imagens/frango-com-requeijao.svg"
+    id: "n12",
+    name: "Frango com Requeijão",
+    ingredients: "Frango com requeijão.",
+    price: 25,
+    category: "salgada",
+    image: "imagens/frango-com-requeijao.svg",
   },
   {
-    "id": "n13",
-    "name": "Frango com Mussarela",
-    "ingredients": "Frango com mussarela.",
-    "price": 25,
-    "category": "salgada",
-    "image": "imagens/frango-com-mussarela.svg"
+    id: "n13",
+    name: "Frango com Mussarela",
+    ingredients: "Frango com mussarela.",
+    price: 25,
+    category: "salgada",
+    image: "imagens/frango-com-mussarela.svg",
   },
   {
-    "id": "n14",
-    "name": "Mexicana",
-    "ingredients": "Calabresa, mussarela, vinagrete e pimenta.",
-    "price": 45,
-    "category": "salgada",
-    "image": "imagens/mexicana.svg"
+    id: "n14",
+    name: "Mexicana",
+    ingredients: "Calabresa, mussarela, vinagrete e pimenta.",
+    price: 45,
+    category: "salgada",
+    image: "imagens/mexicana.svg",
   },
   {
-    "id": "n15",
-    "name": "Mista",
-    "ingredients": "Presunto e mussarela.",
-    "price": 35,
-    "category": "salgada",
-    "image": "imagens/mista.svg"
+    id: "n15",
+    name: "Mista",
+    ingredients: "Presunto e mussarela.",
+    price: 35,
+    category: "salgada",
+    image: "imagens/mista.svg",
   },
   {
-    "id": "n16",
-    "name": "Moda da Casa",
-    "ingredients": "Frango, milho, bacon e mussarela.",
-    "price": 50,
-    "category": "salgada",
-    "image": "imagens/moda-da-casa.svg"
+    id: "n16",
+    name: "Moda da Casa",
+    ingredients: "Frango, milho, bacon e mussarela.",
+    price: 50,
+    category: "salgada",
+    image: "imagens/moda-da-casa.svg",
   },
   {
-    "id": "n17",
-    "name": "Mussarela",
-    "ingredients": "Mussarela tradicional.",
-    "price": 30,
-    "category": "salgada",
-    "image": "imagens/mussarela.svg"
+    id: "n17",
+    name: "Mussarela",
+    ingredients: "Mussarela tradicional.",
+    price: 30,
+    category: "salgada",
+    image: "imagens/mussarela.svg",
   },
   {
-    "id": "n18",
-    "name": "Mussarela com Cheddar",
-    "ingredients": "Mussarela com cheddar.",
-    "price": 35,
-    "category": "salgada",
-    "image": "imagens/mussarela-com-cheddar.svg"
+    id: "n18",
+    name: "Mussarela com Cheddar",
+    ingredients: "Mussarela com cheddar.",
+    price: 35,
+    category: "salgada",
+    image: "imagens/mussarela-com-cheddar.svg",
   },
   {
-    "id": "n19",
-    "name": "Mussarela com Milho",
-    "ingredients": "Mussarela com milho.",
-    "price": 35,
-    "category": "salgada",
-    "image": "imagens/mussarela-com-milho.svg"
+    id: "n19",
+    name: "Mussarela com Milho",
+    ingredients: "Mussarela com milho.",
+    price: 35,
+    category: "salgada",
+    image: "imagens/mussarela-com-milho.svg",
   },
   {
-    "id": "n20",
-    "name": "Mussarela e Bacon",
-    "ingredients": "Mussarela com bacon.",
-    "price": 40,
-    "category": "salgada",
-    "image": "imagens/mussarela-e-bacon.svg"
+    id: "n20",
+    name: "Mussarela e Bacon",
+    ingredients: "Mussarela com bacon.",
+    price: 40,
+    category: "salgada",
+    image: "imagens/mussarela-e-bacon.svg",
   },
   {
-    "id": "n21",
-    "name": "Portuguesa",
-    "ingredients": "Mussarela, presunto, ovo e cebola.",
-    "price": 35,
-    "category": "salgada",
-    "image": "imagens/portuguesa.svg"
+    id: "n21",
+    name: "Portuguesa",
+    ingredients: "Mussarela, presunto, ovo e cebola.",
+    price: 35,
+    category: "salgada",
+    image: "imagens/portuguesa.svg",
   },
   {
-    "id": "n22",
-    "name": "Toscana",
-    "ingredients": "Mussarela e calabresa.",
-    "price": 35,
-    "category": "salgada",
-    "image": "imagens/toscana.svg"
+    id: "n22",
+    name: "Toscana",
+    ingredients: "Mussarela e calabresa.",
+    price: 35,
+    category: "salgada",
+    image: "imagens/toscana.svg",
   },
   {
-    "id": "n23",
-    "name": "Três Queijos",
-    "ingredients": "Mussarela, cheddar e requeijão.",
-    "price": 45,
-    "category": "salgada",
-    "image": "imagens/tres-queijos.svg"
+    id: "n23",
+    name: "Três Queijos",
+    ingredients: "Mussarela, cheddar e requeijão.",
+    price: 45,
+    category: "salgada",
+    image: "imagens/tres-queijos.svg",
   },
   {
-    "id": "n24",
-    "name": "Ucrânia",
-    "ingredients": "Frango, bacon, mussarela e vinagrete.",
-    "price": 50,
-    "category": "salgada",
-    "image": "imagens/ucrania.svg"
+    id: "n24",
+    name: "Ucrânia",
+    ingredients: "Frango, bacon, mussarela e vinagrete.",
+    price: 50,
+    category: "salgada",
+    image: "imagens/ucrania.svg",
   },
   {
-    "id": "n25",
-    "name": "Brigadeiro com Granulado",
-    "ingredients": "Pizza doce de brigadeiro com granulado.",
-    "price": 30,
-    "category": "doce",
-    "image": "imagens/brigadeiro-com-granulado.svg"
+    id: "n25",
+    name: "Brigadeiro com Granulado",
+    ingredients: "Pizza doce de brigadeiro com granulado.",
+    price: 30,
+    category: "doce",
+    image: "imagens/brigadeiro-com-granulado.svg",
   },
   {
-    "id": "n26",
-    "name": "Romeu e Julieta",
-    "ingredients": "Pizza doce de goiabada com queijo.",
-    "price": 30,
-    "category": "doce",
-    "image": "imagens/romeu-e-julieta.svg"
-  }
+    id: "n26",
+    name: "Romeu e Julieta",
+    ingredients: "Pizza doce de goiabada com queijo.",
+    price: 30,
+    category: "doce",
+    image: "imagens/romeu-e-julieta.svg",
+  },
 ];
 
 const vintaoPizzas = [
   {
-    "id": "v1",
-    "name": "Mussarela",
-    "ingredients": "Pizza grande com 8 pedaços.",
-    "price": 20,
-    "category": "vintao",
-    "image": "imagens/mussarela-vintao.svg"
+    id: "v1",
+    name: "Mussarela",
+    ingredients: "Pizza grande com 8 pedaços.",
+    price: 20,
+    category: "vintao",
+    image: "imagens/mussarela-vintao.svg",
   },
   {
-    "id": "v2",
-    "name": "Calabresa",
-    "ingredients": "Pizza grande com 8 pedaços.",
-    "price": 20,
-    "category": "vintao",
-    "image": "imagens/calabresa-vintao.svg"
+    id: "v2",
+    name: "Calabresa",
+    ingredients: "Pizza grande com 8 pedaços.",
+    price: 20,
+    category: "vintao",
+    image: "imagens/calabresa-vintao.svg",
   },
   {
-    "id": "v3",
-    "name": "Frango com Mussarela",
-    "ingredients": "Pizza grande com 8 pedaços.",
-    "price": 20,
-    "category": "vintao",
-    "image": "imagens/frango-com-mussarela-vintao.svg"
+    id: "v3",
+    name: "Frango com Mussarela",
+    ingredients: "Pizza grande com 8 pedaços.",
+    price: 20,
+    category: "vintao",
+    image: "imagens/frango-com-mussarela-vintao.svg",
   },
   {
-    "id": "v4",
-    "name": "Frango com Requeijão",
-    "ingredients": "Pizza grande com 8 pedaços.",
-    "price": 20,
-    "category": "vintao",
-    "image": "imagens/frango-com-requeijao-vintao.svg"
+    id: "v4",
+    name: "Frango com Requeijão",
+    ingredients: "Pizza grande com 8 pedaços.",
+    price: 20,
+    category: "vintao",
+    image: "imagens/frango-com-requeijao-vintao.svg",
   },
   {
-    "id": "v5",
-    "name": "Frango com Cheddar",
-    "ingredients": "Pizza grande com 8 pedaços.",
-    "price": 20,
-    "category": "vintao",
-    "image": "imagens/frango-com-cheddar-vintao.svg"
+    id: "v5",
+    name: "Frango com Cheddar",
+    ingredients: "Pizza grande com 8 pedaços.",
+    price: 20,
+    category: "vintao",
+    image: "imagens/frango-com-cheddar-vintao.svg",
   },
   {
-    "id": "v6",
-    "name": "Toscana com Calabresa Ralada",
-    "ingredients": "Pizza grande com 8 pedaços.",
-    "price": 20,
-    "category": "vintao",
-    "image": "imagens/toscana-com-calabresa-ralada.svg"
+    id: "v6",
+    name: "Toscana com Calabresa Ralada",
+    ingredients: "Pizza grande com 8 pedaços.",
+    price: 20,
+    category: "vintao",
+    image: "imagens/toscana-com-calabresa-ralada.svg",
   },
   {
-    "id": "v7",
-    "name": "Mista",
-    "ingredients": "Mussarela e apresuntado. Pizza grande com 8 pedaços.",
-    "price": 20,
-    "category": "vintao",
-    "image": "imagens/mista-vintao.svg"
-  }
+    id: "v7",
+    name: "Mista",
+    ingredients: "Mussarela e apresuntado. Pizza grande com 8 pedaços.",
+    price: 20,
+    category: "vintao",
+    image: "imagens/mista-vintao.svg",
+  },
 ];
 
 const bebidas = [
@@ -275,7 +275,7 @@ const bebidas = [
     ingredients: "Refrigerante gelado 2 litros.",
     price: 12,
     category: "bebida",
-    image: "imagens/coca-cola-2l.svg"
+    image: "imagens/coca-cola-2l.svg",
   },
   {
     id: "b2",
@@ -283,7 +283,7 @@ const bebidas = [
     ingredients: "Refrigerante gelado 2 litros.",
     price: 10,
     category: "bebida",
-    image: "imagens/guarana-2l.svg"
+    image: "imagens/guarana-2l.svg",
   },
   {
     id: "b3",
@@ -291,7 +291,7 @@ const bebidas = [
     ingredients: "Refrigerante lata 350ml.",
     price: 5,
     category: "bebida",
-    image: "imagens/coca-cola-lata.svg"
+    image: "imagens/coca-cola-lata.svg",
   },
   {
     id: "b4",
@@ -299,15 +299,11 @@ const bebidas = [
     ingredients: "Garrafa de água mineral.",
     price: 3,
     category: "bebida",
-    image: "imagens/agua-mineral.svg"
-  }
+    image: "imagens/agua-mineral.svg",
+  },
 ];
 
-const products = [
-  ...normalPizzas,
-  ...vintaoPizzas,
-  ...bebidas
-];
+const products = [...normalPizzas, ...vintaoPizzas, ...bebidas];
 
 const normalMenu = document.getElementById("normalMenu");
 const vintaoMenu = document.getElementById("vintaoMenu");
@@ -332,14 +328,14 @@ const clientAddress = document.getElementById("clientAddress");
 const clientPassword = document.getElementById("clientPassword");
 const logoutClient = document.getElementById("logoutClient");
 const orderHistory = document.getElementById("orderHistory");
-
+const paymentMethod = document.getElementById("paymentMethod");
 let selectedCategory = "todas";
 let cartList = [];
 
 function formatCurrency(value) {
   return value.toLocaleString("pt-BR", {
     style: "currency",
-    currency: "BRL"
+    currency: "BRL",
   });
 }
 
@@ -365,11 +361,14 @@ function createProductCard(product) {
 function renderNormalPizzas() {
   normalMenu.innerHTML = "";
 
-    const search = searchInput.value.trim().toLowerCase();
-    const menuProducts = [...normalPizzas];
-    const filtered = menuProducts.filter(product => {
-    const matchCategory = selectedCategory === "todas" || product.category === selectedCategory;
-    const matchSearch = product.name.toLowerCase().includes(search) || product.ingredients.toLowerCase().includes(search);
+  const search = searchInput.value.trim().toLowerCase();
+  const menuProducts = [...normalPizzas];
+  const filtered = menuProducts.filter((product) => {
+    const matchCategory =
+      selectedCategory === "todas" || product.category === selectedCategory;
+    const matchSearch =
+      product.name.toLowerCase().includes(search) ||
+      product.ingredients.toLowerCase().includes(search);
 
     return matchCategory && matchSearch;
   });
@@ -379,7 +378,7 @@ function renderNormalPizzas() {
     return;
   }
 
-  filtered.forEach(product => {
+  filtered.forEach((product) => {
     normalMenu.appendChild(createProductCard(product));
   });
 
@@ -389,7 +388,7 @@ function renderNormalPizzas() {
 function renderVintaoPizzas() {
   vintaoMenu.innerHTML = "";
 
-  vintaoPizzas.forEach(product => {
+  vintaoPizzas.forEach((product) => {
     vintaoMenu.appendChild(createProductCard(product));
   });
 
@@ -397,29 +396,24 @@ function renderVintaoPizzas() {
 }
 
 function renderBebidas() {
-
   bebidasMenu.innerHTML = "";
 
-  bebidas.forEach(product => {
-
-    bebidasMenu.appendChild(
-      createProductCard(product)
-    );
-
+  bebidas.forEach((product) => {
+    bebidasMenu.appendChild(createProductCard(product));
   });
 
   addButtonEvents();
 }
 
 function addButtonEvents() {
-  document.querySelectorAll(".add-btn").forEach(button => {
+  document.querySelectorAll(".add-btn").forEach((button) => {
     button.onclick = () => addToCart(button.dataset.id);
   });
 }
 
 function addToCart(productId) {
-  const product = products.find(item => item.id === productId);
-  const itemInCart = cartList.find(item => item.id === productId);
+  const product = products.find((item) => item.id === productId);
+  const itemInCart = cartList.find((item) => item.id === productId);
 
   if (!product) return;
 
@@ -434,14 +428,14 @@ function addToCart(productId) {
 }
 
 function removeFromCart(productId) {
-  const item = cartList.find(product => product.id === productId);
+  const item = cartList.find((product) => product.id === productId);
 
   if (!item) return;
 
   if (item.quantity > 1) {
     item.quantity -= 1;
   } else {
-    cartList = cartList.filter(product => product.id !== productId);
+    cartList = cartList.filter((product) => product.id !== productId);
   }
 
   updateCart();
@@ -454,7 +448,7 @@ function updateCart() {
     cartItems.innerHTML = '<p class="empty-cart">Seu carrinho está vazio.</p>';
   }
 
-  cartList.forEach(item => {
+  cartList.forEach((item) => {
     const div = document.createElement("div");
     div.className = "cart-item";
 
@@ -469,13 +463,16 @@ function updateCart() {
     cartItems.appendChild(div);
   });
 
-  const total = cartList.reduce((sum, item) => sum + item.price * item.quantity, 0);
+  const total = cartList.reduce(
+    (sum, item) => sum + item.price * item.quantity,
+    0,
+  );
   const count = cartList.reduce((sum, item) => sum + item.quantity, 0);
 
   cartTotal.textContent = formatCurrency(total);
   cartCount.textContent = count;
 
-  document.querySelectorAll(".remove-btn").forEach(button => {
+  document.querySelectorAll(".remove-btn").forEach((button) => {
     button.onclick = () => removeFromCart(button.dataset.id);
   });
 }
@@ -511,13 +508,14 @@ function renderOrderHistory() {
   const history = JSON.parse(localStorage.getItem("pizzaOrderHistory")) || [];
 
   if (history.length === 0) {
-    orderHistory.innerHTML = '<p class="empty-history">Nenhum pedido salvo ainda.</p>';
+    orderHistory.innerHTML =
+      '<p class="empty-history">Nenhum pedido salvo ainda.</p>';
     return;
   }
 
   orderHistory.innerHTML = "";
 
-  history.forEach(order => {
+  history.forEach((order) => {
     const div = document.createElement("div");
     div.className = "history-item";
 
@@ -539,11 +537,23 @@ function sendOrderToWhatsapp() {
 
   const phoneNumber = "5511999036467";
 
-  const orderItems = cartList.map(item => {
-    return `${item.quantity}x ${item.name} - ${formatCurrency(item.price * item.quantity)}`;
-  }).join("%0A");
+  const orderItems = cartList
+    .map((item) => {
+      return `${item.quantity}x ${item.name} - ${formatCurrency(item.price * item.quantity)}`;
+    })
+    .join("%0A");
 
-  const total = cartList.reduce((sum, item) => sum + item.price * item.quantity, 0);
+  const total = cartList.reduce(
+    (sum, item) => sum + item.price * item.quantity,
+    0,
+  );
+
+  const payment = paymentMethod.value;
+
+  if (!payment) {
+    alert("Selecione a forma de pagamento.");
+    return;
+  }
 
   const client = getClient();
 
@@ -557,16 +567,15 @@ function sendOrderToWhatsapp() {
 
     saveOrderHistory({
       date: new Date().toLocaleString("pt-BR"),
-      items: cartList.map(item => `${item.quantity}x ${item.name}`).join(", "),
-      total: total
+      items: cartList
+        .map((item) => `${item.quantity}x ${item.name}`)
+        .join(", "),
+      total: total,
     });
 
     renderOrderHistory();
   } else {
-    clientInfo =
-      `Nome:%0A` +
-      `Celular:%0A` +
-      `Endereço:%0A%0A`;
+    clientInfo = `Nome:%0A` + `Celular:%0A` + `Endereço:%0A%0A`;
   }
 
   const message =
@@ -574,15 +583,15 @@ function sendOrderToWhatsapp() {
     clientInfo +
     `Pedido:%0A${orderItems}%0A%0A` +
     `Total: ${formatCurrency(total)}%0A%0A` +
-    `Forma de pagamento:%0A` +
+    `Forma de pagamento: ${payment}%0A` +
     `Observação:`;
 
   window.open(`https://wa.me/${phoneNumber}?text=${message}`, "_blank");
 }
 
-tabs.forEach(button => {
+tabs.forEach((button) => {
   button.addEventListener("click", () => {
-    tabs.forEach(item => item.classList.remove("active"));
+    tabs.forEach((item) => item.classList.remove("active"));
     button.classList.add("active");
     selectedCategory = button.dataset.category;
     renderNormalPizzas();
@@ -599,7 +608,7 @@ menuButton.addEventListener("click", () => {
   navLinks.classList.toggle("open");
 });
 
-document.querySelectorAll(".nav-links a").forEach(link => {
+document.querySelectorAll(".nav-links a").forEach((link) => {
   link.addEventListener("click", () => {
     navLinks.classList.remove("open");
   });
@@ -610,15 +619,14 @@ renderVintaoPizzas();
 renderBebidas();
 updateCart();
 
-
-clientForm.addEventListener("submit", event => {
+clientForm.addEventListener("submit", (event) => {
   event.preventDefault();
 
   const client = {
     name: clientName.value.trim(),
     phone: clientPhone.value.trim(),
     address: clientAddress.value.trim(),
-    password: clientPassword.value.trim()
+    password: clientPassword.value.trim(),
   };
 
   saveClient(client);

@@ -5,16 +5,16 @@
 }
 
 :root {
-  --bg: #0D0D0D;
-  --section: #1A1A1A;
+  --bg: #0d0d0d;
+  --section: #1a1a1a;
   --card: #252525;
-  --primary: #E63946;
-  --primary-hover: #C92E3A;
-  --price: #FF7A00;
-  --title: #FFFFFF;
-  --text: #CFCFCF;
-  --whatsapp: #25D366;
-  --whatsapp-hover: #1DB954;
+  --primary: #e63946;
+  --primary-hover: #c92e3a;
+  --price: #ff7a00;
+  --title: #ffffff;
+  --text: #cfcfcf;
+  --whatsapp: #25d366;
+  --whatsapp-hover: #1db954;
   --border: rgba(255, 255, 255, 0.08);
   --shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
 }
@@ -143,9 +143,17 @@ img {
 .hero {
   padding: 44px 0 28px;
   background:
-    radial-gradient(circle at top right, rgba(230, 57, 70, 0.16), transparent 32%),
-    radial-gradient(circle at top left, rgba(255, 122, 0, 0.12), transparent 30%),
-    linear-gradient(180deg, #0D0D0D 0%, #1A1A1A 100%);
+    radial-gradient(
+      circle at top right,
+      rgba(230, 57, 70, 0.16),
+      transparent 32%
+    ),
+    radial-gradient(
+      circle at top left,
+      rgba(255, 122, 0, 0.12),
+      transparent 30%
+    ),
+    linear-gradient(180deg, #0d0d0d 0%, #1a1a1a 100%);
   border-bottom: 1px solid var(--border);
 }
 
@@ -661,8 +669,8 @@ h2 {
   border-radius: 50%;
   display: grid;
   place-items: center;
-  background: #FFFFFF;
-  color: #128C3A;
+  background: #ffffff;
+  color: #128c3a;
 }
 
 /* RODAPÉ */
@@ -862,3 +870,27 @@ h2 {
     grid-template-columns: 1fr;
   }
 }
+
+.payment-box {
+  margin-bottom: 14px;
+}
+
+.payment-box label {
+  display: block;
+  color: var(--text);
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.payment-box select {
+  width: 100%;
+  height: 46px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: var(--card);
+  color: var(--title);
+  padding: 0 12px;
+  outline: none;
+  font-weight: 700;
+}
+
