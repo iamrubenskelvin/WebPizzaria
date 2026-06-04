@@ -239,7 +239,6 @@
         <div class="cart-total">
           <div class="payment-box">
             <label for="paymentMethod">Forma de pagamento</label>
-
             <select id="paymentMethod">
               <option value="">Selecione:</option>
               <option value="Pix">Pix</option>
@@ -247,6 +246,16 @@
               <option value="Débito">Débito</option>
               <option value="Crédito">Crédito</option>
             </select>
+            <div class="delivery-box">
+  <label for="deliveryType">Entrega</label>
+
+  <select id="deliveryType">
+    <option value="">Selecione:</option>
+    <option value="Retirada">Retirar no local</option>
+    <option value="Entrega">Entrega (+ R$ 5,00)</option>
+    <option value="Consultar">Consultar taxa</option>
+  </select>
+</div>
           </div>
           <span>Total</span>
           <strong id="cartTotal">R$ 0,00</strong>

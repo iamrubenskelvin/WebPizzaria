@@ -894,3 +894,25 @@ h2 {
   font-weight: 700;
 }
 
+.delivery-box {
+  margin-bottom: 14px;
+}
+
+.delivery-box label {
+  display: block;
+  color: var(--text);
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.delivery-box select {
+  width: 100%;
+  height: 46px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: var(--card);
+  color: var(--title);
+  padding: 0 12px;
+  outline: none;
+  font-weight: 700;
+}
