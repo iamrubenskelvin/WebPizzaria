@@ -1,50 +1,63 @@
-# Site Pizzaria É Hoje - Delivery Moderno
+# 🍕 WebPizzaria
 
-Versão com visual claro, estilo delivery, sem emojis nos cards e com imagens por sabor.
+Projeto de cardápio digital desenvolvido para pizzarias de pequeno e médio porte, oferecendo uma experiência moderna e intuitiva para clientes realizarem pedidos online.
 
-## Arquivos principais
+## 🚀 Funcionalidades
 
-- index.html
-- style.css
-- script.js
-- pasta imagens/
+* Cardápio digital organizado por categorias
+* Seção exclusiva para pizzas promocionais
+* Carrinho de compras
+* Integração com WhatsApp
+* Pesquisa de sabores
+* Design responsivo para celular, tablet e desktop
+* Interface moderna inspirada em aplicativos de delivery
+* Informações de contato e localização
 
-## Sobre as imagens
+## 🛠️ Tecnologias Utilizadas
 
-A pasta `imagens/` já vem com imagens ilustrativas em SVG para cada sabor.
+* HTML5
+* CSS3
+* JavaScript
+* Git
+* GitHub
 
-Para trocar por fotos reais:
-1. Coloque a foto dentro da pasta `imagens`.
-2. No arquivo `script.js`, altere o caminho da imagem do produto.
+## 📱 Responsividade
 
-Exemplo:
+O projeto foi desenvolvido utilizando boas práticas de responsividade para garantir uma excelente experiência em diferentes dispositivos.
 
-```js
-image: "imagens/calabresa.jpg"
+## 🎯 Objetivo
+
+Criar uma solução simples, rápida e acessível para pizzarias que desejam modernizar seu atendimento e facilitar o recebimento de pedidos online.
+
+## 📍 Informações do Projeto
+
+* Endereço: R. Itá, 280 - Vila Silviania, Carapicuíba - SP
+* Atendimento: Terça a Domingo
+* Horário: 18h às 23h
+
+## 💻 Como Executar
+
+1. Clone o repositório:
+
+```bash
+git clone https://github.com/iamrubenskelvin/WebPizzaria.git
 ```
 
-## WhatsApp configurado
+2. Abra a pasta do projeto.
 
-(11) 99903-6467
+3. Execute o arquivo `index.html` ou utilize a extensão Live Server no VS Code.
 
-No `script.js`, altere aqui se precisar:
+## 📸 Preview
 
-```js
-const phoneNumber = "5511999036467";
-```
+Adicione imagens ou screenshots do projeto nesta seção para destacar o visual da aplicação.
 
-## Endereço
+## 👨‍💻 Autor
 
-R. Itá, 280 - Vila Silviania, Carapicuíba - SP, 06321-600
+Rubens Kelvin
 
+* LinkedIn: https://www.linkedin.com/in/iamrubenskelvin/
+* GitHub: https://github.com/iamrubenskelvin
 
-## Paleta aplicada
+---
 
-- Preto: #0D0D0D
-- Grafite: #1A1A1A
-- Cinza escuro: #252525
-- Vermelho: #E63946
-- Laranja: #FF7A00
-- Branco: #FFFFFF
-- Cinza claro: #CFCFCF
-- Verde WhatsApp: #25D366
+Projeto desenvolvido para fins de estudo, prática e composição de portfólio profissional.
