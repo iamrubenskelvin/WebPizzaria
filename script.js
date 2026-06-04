@@ -457,7 +457,10 @@ function updateCart() {
         <strong>${item.quantity}x ${item.name}</strong>
         <small>${formatCurrency(item.price)} cada</small>
       </div>
-      <button class="remove-btn" data-id="${item.id}">−</button>
+
+      <button class="remove-btn" data-id="${item.id}">
+        −
+      </button>
     `;
 
     cartItems.appendChild(div);
@@ -517,18 +520,45 @@ function renderOrderHistory() {
 
   orderHistory.innerHTML = "";
 
-  history.forEach((order) => {
+  history.forEach((order, index) => {
     const div = document.createElement("div");
     div.className = "history-item";
 
     div.innerHTML = `
       <strong>${order.date}</strong>
-      <small>${order.items}</small>
+      <small>${order.itemsText || order.items}</small>
       <small>Total: ${formatCurrency(order.total)}</small>
+
+      <button class="repeat-order-btn" data-index="${index}">
+        Repetir pedido
+      </button>
     `;
 
     orderHistory.appendChild(div);
   });
+
+  document.querySelectorAll(".repeat-order-btn").forEach(button => {
+    button.addEventListener("click", () => {
+      repeatOrder(Number(button.dataset.index));
+    });
+  });
+}
+
+function repeatOrder(index) {
+  const history = JSON.parse(localStorage.getItem("pizzaOrderHistory")) || [];
+  const order = history[index];
+
+  if (!order || !order.itemsData) {
+    alert("Esse pedido foi salvo no formato antigo. Faça um novo pedido para repetir.");
+    return;
+  }
+
+  cartList = order.itemsData.map(item => ({ ...item }));
+
+  updateCart();
+  cart.classList.add("open");
+
+  alert("Pedido adicionado ao carrinho!");
 }
 
 function sendOrderToWhatsapp() {
@@ -597,10 +627,11 @@ function sendOrderToWhatsapp() {
 
   if (client) {
     saveOrderHistory({
-      date: new Date().toLocaleString("pt-BR"),
-      items: cartList.map(item => `${item.quantity}x ${item.name}`).join(", "),
-      total: finalTotal
-    });
+  date: new Date().toLocaleString("pt-BR"),
+  itemsText: cartList.map(item => `${item.quantity}x ${item.name}`).join(", "),
+  itemsData: cartList.map(item => ({ ...item })),
+  total: finalTotal
+});
 
     renderOrderHistory();
   }

@@ -916,3 +916,17 @@ h2 {
   outline: none;
   font-weight: 700;
 }
+
+.repeat-order-btn {
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  background: var(--primary);
+  color: var(--title);
+  font-weight: 900;
+}
+
+.repeat-order-btn:hover {
+  background: var(--primary-hover);
+}
