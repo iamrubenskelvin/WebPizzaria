@@ -930,3 +930,11 @@ h2 {
 .repeat-order-btn:hover {
   background: var(--primary-hover);
 }
+
+.save-message {
+  min-height: 20px;
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #25D366;
+}

@@ -323,6 +323,7 @@ const cartItems = document.getElementById("cartItems");
 const cartTotal = document.getElementById("cartTotal");
 const cartCount = document.getElementById("cartCount");
 const sendOrder = document.getElementById("sendOrder");
+const saveMessage = document.getElementById("saveMessage");
 
 const menuButton = document.getElementById("menuButton");
 const navLinks = document.getElementById("navLinks");
@@ -714,13 +715,16 @@ clientForm.addEventListener("submit", async (event) => {
   const savedClient = await saveClient(client);
 
   if (savedClient) {
-    alert("Dados salvos com sucesso no Supabase!");
+    saveMessage.textContent = "✓ Dados salvos com sucesso";
+
+    setTimeout(() => {
+      saveMessage.textContent = "";
+    }, 3000);
   }
 });
 
 logoutClient.addEventListener("click", () => {
   localStorage.removeItem("pizzaClient");
-  localStorage.removeItem("pizzaOrderHistory");
 
   clientForm.reset();
   renderOrderHistory();
