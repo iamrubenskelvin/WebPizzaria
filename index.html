@@ -29,6 +29,7 @@
       <nav class="nav-links" id="navLinks">
         <a href="#cardapio">Cardápio</a>
         <a href="#vintao">Pizza R$20</a>
+        <a href="#area-cliente">Área do Cliente</a>
         <a href="#contato">Contato</a>
       </nav>
 
@@ -115,6 +116,51 @@
         <div class="product-grid" id="vintaoMenu"></div>
       </div>
     </section>
+
+<section class="container section client-area" id="area-cliente">
+  <div class="section-header">
+    <div>
+      <span class="eyebrow">Área do Cliente</span>
+      <h2>Facilite seus próximos pedidos</h2>
+      <p>
+        O cadastro é opcional. Com ele, seus dados ficam salvos neste aparelho
+        e seus próximos pedidos vão preenchidos automaticamente no WhatsApp.
+      </p>
+    </div>
+  </div>
+
+  <div class="client-grid">
+    <div class="client-card">
+      <h3>Meus dados</h3>
+
+      <form id="clientForm">
+        <input type="text" id="clientName" placeholder="Nome completo">
+        <input type="tel" id="clientPhone" placeholder="Celular">
+        <input type="text" id="clientAddress" placeholder="Endereço de entrega">
+        <input type="password" id="clientPassword" placeholder="Senha">
+
+        <button type="submit" class="btn primary full">
+          Salvar meus dados
+        </button>
+      </form>
+
+      <button class="logout-client" id="logoutClient">
+        Apagar meus dados
+      </button>
+    </div>
+
+    <div class="client-card">
+      <h3>Histórico de pedidos</h3>
+      <div id="orderHistory">
+        <p class="empty-history">Nenhum pedido salvo ainda.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="container section contact" id="contato">
+  ...
+</section>
 
     <section class="container section contact" id="contato">
       <span class="eyebrow">Contato</span>

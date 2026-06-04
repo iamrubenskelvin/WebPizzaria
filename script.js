@@ -286,6 +286,14 @@ const sendOrder = document.getElementById("sendOrder");
 const menuButton = document.getElementById("menuButton");
 const navLinks = document.getElementById("navLinks");
 
+const clientForm = document.getElementById("clientForm");
+const clientName = document.getElementById("clientName");
+const clientPhone = document.getElementById("clientPhone");
+const clientAddress = document.getElementById("clientAddress");
+const clientPassword = document.getElementById("clientPassword");
+const logoutClient = document.getElementById("logoutClient");
+const orderHistory = document.getElementById("orderHistory");
+
 let selectedCategory = "todas";
 let cartList = [];
 
@@ -418,6 +426,57 @@ function updateCart() {
   });
 }
 
+function getClient() {
+  return JSON.parse(localStorage.getItem("pizzaClient"));
+}
+
+function saveClient(client) {
+  localStorage.setItem("pizzaClient", JSON.stringify(client));
+}
+
+function loadClientData() {
+  const client = getClient();
+
+  if (!client) return;
+
+  clientName.value = client.name;
+  clientPhone.value = client.phone;
+  clientAddress.value = client.address;
+  clientPassword.value = client.password;
+}
+
+function saveOrderHistory(order) {
+  const history = JSON.parse(localStorage.getItem("pizzaOrderHistory")) || [];
+
+  history.unshift(order);
+
+  localStorage.setItem("pizzaOrderHistory", JSON.stringify(history));
+}
+
+function renderOrderHistory() {
+  const history = JSON.parse(localStorage.getItem("pizzaOrderHistory")) || [];
+
+  if (history.length === 0) {
+    orderHistory.innerHTML = '<p class="empty-history">Nenhum pedido salvo ainda.</p>';
+    return;
+  }
+
+  orderHistory.innerHTML = "";
+
+  history.forEach(order => {
+    const div = document.createElement("div");
+    div.className = "history-item";
+
+    div.innerHTML = `
+      <strong>${order.date}</strong>
+      <small>${order.items}</small>
+      <small>Total: ${formatCurrency(order.total)}</small>
+    `;
+
+    orderHistory.appendChild(div);
+  });
+}
+
 function sendOrderToWhatsapp() {
   if (cartList.length === 0) {
     alert("Adicione pelo menos um item ao carrinho.");
@@ -432,12 +491,35 @@ function sendOrderToWhatsapp() {
 
   const total = cartList.reduce((sum, item) => sum + item.price * item.quantity, 0);
 
+  const client = getClient();
+
+  let clientInfo = "";
+
+  if (client) {
+    clientInfo =
+      `Cliente: ${client.name}%0A` +
+      `Celular: ${client.phone}%0A` +
+      `Endereço: ${client.address}%0A%0A`;
+
+    saveOrderHistory({
+      date: new Date().toLocaleString("pt-BR"),
+      items: cartList.map(item => `${item.quantity}x ${item.name}`).join(", "),
+      total: total
+    });
+
+    renderOrderHistory();
+  } else {
+    clientInfo =
+      `Nome:%0A` +
+      `Celular:%0A` +
+      `Endereço:%0A%0A`;
+  }
+
   const message =
     `Olá, gostaria de fazer um pedido:%0A%0A` +
-    `${orderItems}%0A%0A` +
+    clientInfo +
+    `Pedido:%0A${orderItems}%0A%0A` +
     `Total: ${formatCurrency(total)}%0A%0A` +
-    `Nome:%0A` +
-    `Endereço:%0A` +
     `Forma de pagamento:%0A` +
     `Observação:`;
 
@@ -472,3 +554,32 @@ document.querySelectorAll(".nav-links a").forEach(link => {
 renderNormalPizzas();
 renderVintaoPizzas();
 updateCart();
+
+
+clientForm.addEventListener("submit", event => {
+  event.preventDefault();
+
+  const client = {
+    name: clientName.value.trim(),
+    phone: clientPhone.value.trim(),
+    address: clientAddress.value.trim(),
+    password: clientPassword.value.trim()
+  };
+
+  saveClient(client);
+
+  alert("Dados salvos com sucesso!");
+});
+
+logoutClient.addEventListener("click", () => {
+  localStorage.removeItem("pizzaClient");
+  localStorage.removeItem("pizzaOrderHistory");
+
+  clientForm.reset();
+  renderOrderHistory();
+
+  alert("Dados apagados com sucesso!");
+});
+
+loadClientData();
+renderOrderHistory();
